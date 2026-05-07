@@ -1167,6 +1167,10 @@ final class ChatListControllerNode: ASDisplayNode, ASGestureRecognizerDelegate {
     
     var requestDeactivateSearch: (() -> Void)?
     var requestOpenPeerFromSearch: ((EnginePeer, Int64?, Bool) -> Void)?
+
+    private func calculateFilterTabsYPosition(layout: ContainerViewLayout, filterTabsSize: CGSize) -> CGFloat {
+        return layout.size.height - layout.intrinsicInsets.bottom - filterTabsSize.height - self.filterTabsBottomSpacing
+    }
     var requestOpenRecentPeerOptions: ((EnginePeer) -> Void)?
     var requestOpenMessageFromSearch: ((EnginePeer, Int64?, EngineMessage.Id, Bool) -> Void)?
     var requestAddContact: ((String) -> Void)?
@@ -1504,8 +1508,9 @@ final class ChatListControllerNode: ASDisplayNode, ASGestureRecognizerDelegate {
             )
         }
         
+        let shouldDisplayBottomFilterTabs = self.toolbar == nil
         var filterTabs: AnyComponent<Empty>?
-        if self.toolbar == nil, let tabContainerData = self.controller?.tabContainerData, tabContainerData.0.count > 1 {
+        if shouldDisplayBottomFilterTabs, let tabContainerData = self.controller?.tabContainerData, tabContainerData.0.count > 1 {
                 let folderFilterIndex: (ChatListFilterTabEntryId, [ChatListFilterTabEntry]) -> Int? = { id, entries in
                     var index = 0
                     for entry in entries {
@@ -1729,7 +1734,7 @@ final class ChatListControllerNode: ASDisplayNode, ASGestureRecognizerDelegate {
                 if filterTabsView.superview == nil {
                     self.view.addSubview(filterTabsView)
                 }
-                let y = layout.size.height - layout.intrinsicInsets.bottom - filterTabsSize.height - self.filterTabsBottomSpacing
+                let y = self.calculateFilterTabsYPosition(layout: layout, filterTabsSize: filterTabsSize)
                 transition.setAlpha(view: filterTabsView, alpha: 1.0)
                 transition.setFrame(view: filterTabsView, frame: CGRect(origin: CGPoint(x: 0.0, y: y), size: filterTabsSize))
                 filterTabsHeight = filterTabsSize.height + self.filterTabsAdditionalInset
