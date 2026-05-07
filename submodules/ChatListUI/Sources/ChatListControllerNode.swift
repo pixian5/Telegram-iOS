@@ -1167,10 +1167,6 @@ final class ChatListControllerNode: ASDisplayNode, ASGestureRecognizerDelegate {
     
     var requestDeactivateSearch: (() -> Void)?
     var requestOpenPeerFromSearch: ((EnginePeer, Int64?, Bool) -> Void)?
-
-    private func calculateFilterTabsYPosition(layout: ContainerViewLayout, filterTabsSize: CGSize) -> CGFloat {
-        return layout.size.height - layout.intrinsicInsets.bottom - filterTabsSize.height - self.filterTabsBottomSpacing
-    }
     var requestOpenRecentPeerOptions: ((EnginePeer) -> Void)?
     var requestOpenMessageFromSearch: ((EnginePeer, Int64?, EngineMessage.Id, Bool) -> Void)?
     var requestAddContact: ((String) -> Void)?
@@ -1407,6 +1403,10 @@ final class ChatListControllerNode: ASDisplayNode, ASGestureRecognizerDelegate {
         if let toolbarNode = self.toolbarNode {
             toolbarNode.updateTheme(ToolbarTheme(rootControllerTheme: self.presentationData.theme))
         }
+    }
+    
+    private func calculateFilterTabsYPosition(layout: ContainerViewLayout, filterTabsSize: CGSize) -> CGFloat {
+        return layout.size.height - layout.intrinsicInsets.bottom - filterTabsSize.height - self.filterTabsBottomSpacing
     }
     
     private func updateNavigationBar(layout: ContainerViewLayout, deferScrollApplication: Bool, transition: ComponentTransition) -> (navigationHeight: CGFloat, storiesInset: CGFloat, filterTabsHeight: CGFloat) {
@@ -1740,8 +1740,7 @@ final class ChatListControllerNode: ASDisplayNode, ASGestureRecognizerDelegate {
                 filterTabsHeight = filterTabsSize.height + self.filterTabsAdditionalInset
             }
         } else if let filterTabsView = self.filterTabsView.view {
-            transition.setAlpha(view: filterTabsView, alpha: 0.0)
-            transition.setFrame(view: filterTabsView, frame: CGRect(origin: CGPoint(x: 0.0, y: layout.size.height), size: filterTabsView.frame.size))
+            filterTabsView.removeFromSuperview()
         }
         self.filterTabsHeight = filterTabsHeight
         
