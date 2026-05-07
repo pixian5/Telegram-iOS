@@ -4765,6 +4765,14 @@ public class ChatListControllerImpl: TelegramBaseController, ChatListController 
         }
     }
     
+    public override func tabBarItemHasDoubleTapAction() -> Bool {
+        return true
+    }
+    
+    public override func tabBarItemPerformDoubleTapAction() {
+        self.chatListDisplayNode.effectiveContainerNode.currentItemNode.selectChat(.next(unread: true))
+    }
+    
     public override var keyShortcuts: [KeyShortcut] {
         let strings = self.presentationData.strings
         

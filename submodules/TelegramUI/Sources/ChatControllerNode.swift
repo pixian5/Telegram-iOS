@@ -763,11 +763,8 @@ class ChatControllerNode: ASDisplayNode, ASScrollViewDelegate {
                 break
             }
         }
-        if let displayAdPeer {
-            self.adMessagesContext = context.engine.messages.adMessages(peerId: displayAdPeer, activateManually: true)
-        } else {
-            self.adMessagesContext = nil
-        }
+        let _ = displayAdPeer
+        self.adMessagesContext = nil
 
         var getMessageTransitionNode: (() -> ChatMessageTransitionNodeImpl?)?
         self.historyNode = ChatHistoryListNodeImpl(context: context, updatedPresentationData: controller?.updatedPresentationData ?? (context.sharedContext.currentPresentationData.with({ $0 }), context.sharedContext.presentationData), chatLocation: chatLocation, chatLocationContextHolder: chatLocationContextHolder, adMessagesContext: self.adMessagesContext, tag: tag.flatMap { .tag($0) }, source: source, subject: subject, controllerInteraction: controllerInteraction, selectedMessages: self.selectedMessagesPromise.get(), rotated: historyNodeRotated, isChatPreview: isChatPreview, messageTransitionNode: {

@@ -1132,6 +1132,8 @@ final class ChatListControllerNode: ASDisplayNode, ASGestureRecognizerDelegate {
     private var tapRecognizer: UITapGestureRecognizer?
     var navigationBar: NavigationBar?
     let navigationBarView = ComponentView<Empty>()
+    let filterTabsView = ComponentView<Empty>()
+    private(set) var filterTabsHeight: CGFloat = 0.0
     weak var controller: ChatListControllerImpl?
     
     var toolbar: Toolbar?
@@ -1401,7 +1403,7 @@ final class ChatListControllerNode: ASDisplayNode, ASGestureRecognizerDelegate {
         }
     }
     
-    private func updateNavigationBar(layout: ContainerViewLayout, deferScrollApplication: Bool, transition: ComponentTransition) -> (navigationHeight: CGFloat, storiesInset: CGFloat) {
+    private func updateNavigationBar(layout: ContainerViewLayout, deferScrollApplication: Bool, transition: ComponentTransition) -> (navigationHeight: CGFloat, storiesInset: CGFloat, filterTabsHeight: CGFloat) {
         let headerContent = self.controller?.updateHeaderContent()
         
         var panels: [HeaderPanelContainerComponent.Panel] = []
@@ -1500,10 +1502,8 @@ final class ChatListControllerNode: ASDisplayNode, ASGestureRecognizerDelegate {
             )
         }
         
-        var navigationHeaderPanels: AnyComponent<Empty>?
-        if self.controller?.tabContainerData != nil || !panels.isEmpty {
-            var tabs: AnyComponent<Empty>?
-            if let tabContainerData = self.controller?.tabContainerData, tabContainerData.0.count > 1 {
+        var filterTabs: AnyComponent<Empty>?
+        if self.toolbar == nil, let tabContainerData = self.controller?.tabContainerData, tabContainerData.0.count > 1 {
                 let folderFilterIndex: (ChatListFilterTabEntryId, [ChatListFilterTabEntry]) -> Int? = { id, entries in
                     var index = 0
                     for entry in entries {
@@ -1532,7 +1532,7 @@ final class ChatListControllerNode: ASDisplayNode, ASGestureRecognizerDelegate {
                 
                 let isEditing = self.isReorderingFilters || (self.mainContainerNode.currentItemNode.currentState.editing && !self.didBeginSelectingChatsWhileEditing)
                 
-                tabs = AnyComponent(HorizontalTabsComponent(
+                filterTabs = AnyComponent(HorizontalTabsComponent(
                     context: self.context,
                     theme: self.presentationData.theme,
                     tabs: tabContainerData.0.map { entry -> HorizontalTabsComponent.Tab in
@@ -1637,11 +1637,13 @@ final class ChatListControllerNode: ASDisplayNode, ASGestureRecognizerDelegate {
                     isEditing: isEditing,
                     liftWhileSwitching: layout.deviceMetrics.type != .tablet
                 ))
-            }
-                
+        }
+        
+        var navigationHeaderPanels: AnyComponent<Empty>?
+        if !panels.isEmpty {
             navigationHeaderPanels = AnyComponent(HeaderPanelContainerComponent(
                 theme: self.presentationData.theme,
-                tabs: tabs,
+                tabs: nil,
                 panels: panels
             ))
         }
@@ -1713,6 +1715,29 @@ final class ChatListControllerNode: ASDisplayNode, ASGestureRecognizerDelegate {
             environment: {},
             containerSize: layout.size
         )
+        var filterTabsHeight: CGFloat = 0.0
+        if let filterTabs {
+            let filterTabsSize = self.filterTabsView.update(
+                transition: transition,
+                component: filterTabs,
+                environment: {},
+                containerSize: CGSize(width: layout.size.width, height: 50.0)
+            )
+            if let filterTabsView = self.filterTabsView.view {
+                if filterTabsView.superview == nil {
+                    self.view.addSubview(filterTabsView)
+                }
+                let y = layout.size.height - layout.intrinsicInsets.bottom - filterTabsSize.height - 4.0
+                transition.setAlpha(view: filterTabsView, alpha: 1.0)
+                transition.setFrame(view: filterTabsView, frame: CGRect(origin: CGPoint(x: 0.0, y: y), size: filterTabsSize))
+                filterTabsHeight = filterTabsSize.height + 8.0
+            }
+        } else if let filterTabsView = self.filterTabsView.view {
+            transition.setAlpha(view: filterTabsView, alpha: 0.0)
+            transition.setFrame(view: filterTabsView, frame: CGRect(origin: CGPoint(x: 0.0, y: layout.size.height), size: filterTabsView.frame.size))
+        }
+        self.filterTabsHeight = filterTabsHeight
+        
         if let navigationBarComponentView = self.navigationBarView.view as? ChatListNavigationBar.View {
             if deferScrollApplication {
                 navigationBarComponentView.deferScrollApplication = true
@@ -1723,9 +1748,9 @@ final class ChatListControllerNode: ASDisplayNode, ASGestureRecognizerDelegate {
             }
             transition.setFrame(view: navigationBarComponentView, frame: CGRect(origin: CGPoint(), size: navigationBarSize))
             
-            return (navigationBarSize.height, 0.0)
+            return (navigationBarSize.height, 0.0, filterTabsHeight)
         } else {
-            return (0.0, 0.0)
+            return (0.0, 0.0, filterTabsHeight)
         }
     }
     
@@ -1830,6 +1855,7 @@ final class ChatListControllerNode: ASDisplayNode, ASGestureRecognizerDelegate {
         visualNavigationHeight = navigationBarLayout.navigationHeight
         cleanNavigationBarHeight = navigationBarLayout.navigationHeight
         storiesInset = navigationBarLayout.storiesInset
+        let filterTabsHeight = navigationBarLayout.filterTabsHeight
         
         self.containerLayout = (layout, navigationBarHeight, visualNavigationHeight, cleanNavigationBarHeight, storiesInset)
         
@@ -1887,8 +1913,10 @@ final class ChatListControllerNode: ASDisplayNode, ASGestureRecognizerDelegate {
             })
         }
         
+        insets.bottom += filterTabsHeight
+        
         var childrenLayout = layout
-        childrenLayout.intrinsicInsets = UIEdgeInsets(top: visualNavigationHeight, left: childrenLayout.intrinsicInsets.left, bottom: childrenLayout.intrinsicInsets.bottom, right: childrenLayout.intrinsicInsets.right)
+        childrenLayout.intrinsicInsets = UIEdgeInsets(top: visualNavigationHeight, left: childrenLayout.intrinsicInsets.left, bottom: childrenLayout.intrinsicInsets.bottom + filterTabsHeight, right: childrenLayout.intrinsicInsets.right)
         self.controller?.presentationContext.containerLayoutUpdated(childrenLayout, transition: transition)
         
         transition.updateFrame(node: self.mainContainerNode, frame: CGRect(origin: CGPoint(), size: layout.size))
