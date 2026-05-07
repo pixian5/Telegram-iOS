@@ -1,0 +1,14 @@
+{
+	"bundle_id": "org.pixian5.TelegramSide",
+	"api_id": "28071027",
+	"api_hash": "449cf3df8937bb8c31bdd4a610a25a5a",
+	"team_id": "PSTNW3UN4R",
+	"app_center_id": "0",
+	"is_internal_build": "true",
+	"is_appstore_build": "false",
+	"appstore_id": "0",
+	"app_specific_url_scheme": "tgside",
+	"premium_iap_product_id": "",
+	"enable_siri": false,
+	"enable_icloud": false
+}
