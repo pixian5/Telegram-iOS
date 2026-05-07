@@ -754,6 +754,8 @@ class ChatControllerNode: ASDisplayNode, ASScrollViewDelegate {
             switch subject {
             case let .tag(tagValue):
                 tag = tagValue
+            case .none, .message:
+                break
             default:
                 break
             }
