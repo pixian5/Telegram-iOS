@@ -1134,6 +1134,8 @@ final class ChatListControllerNode: ASDisplayNode, ASGestureRecognizerDelegate {
     let navigationBarView = ComponentView<Empty>()
     let filterTabsView = ComponentView<Empty>()
     private(set) var filterTabsHeight: CGFloat = 0.0
+    private let filterTabsBottomSpacing: CGFloat = 4.0
+    private let filterTabsAdditionalInset: CGFloat = 8.0
     weak var controller: ChatListControllerImpl?
     
     var toolbar: Toolbar?
@@ -1727,10 +1729,10 @@ final class ChatListControllerNode: ASDisplayNode, ASGestureRecognizerDelegate {
                 if filterTabsView.superview == nil {
                     self.view.addSubview(filterTabsView)
                 }
-                let y = layout.size.height - layout.intrinsicInsets.bottom - filterTabsSize.height - 4.0
+                let y = layout.size.height - layout.intrinsicInsets.bottom - filterTabsSize.height - self.filterTabsBottomSpacing
                 transition.setAlpha(view: filterTabsView, alpha: 1.0)
                 transition.setFrame(view: filterTabsView, frame: CGRect(origin: CGPoint(x: 0.0, y: y), size: filterTabsSize))
-                filterTabsHeight = filterTabsSize.height + 8.0
+                filterTabsHeight = filterTabsSize.height + self.filterTabsAdditionalInset
             }
         } else if let filterTabsView = self.filterTabsView.view {
             transition.setAlpha(view: filterTabsView, alpha: 0.0)

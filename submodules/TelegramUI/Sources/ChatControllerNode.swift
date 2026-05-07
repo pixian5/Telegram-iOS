@@ -749,21 +749,15 @@ class ChatControllerNode: ASDisplayNode, ASScrollViewDelegate {
         
         self.controllerInteraction.chatIsRotated = historyNodeRotated
         
-        var displayAdPeer: PeerId?
         var tag: MessageTags?
         if !isChatPreview {
             switch subject {
             case let .tag(tagValue):
                 tag = tagValue
-            case .none, .message:
-                if case let .peer(peerId) = chatLocation {
-                    displayAdPeer = peerId
-                }
             default:
                 break
             }
         }
-        let _ = displayAdPeer
         self.adMessagesContext = nil
 
         var getMessageTransitionNode: (() -> ChatMessageTransitionNodeImpl?)?
