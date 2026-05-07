@@ -1,0 +1,8 @@
+import Foundation
+import ProjectSpec
+import XcodeGenCLI
+import Version
+
+let version = Version("2.45.4")
+let cli = XcodeGenCLI(version: version)
+cli.execute()

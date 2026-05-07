@@ -1,0 +1,107 @@
+:swift_library //HelloWorld:HelloWorldLib#//HelloWorld:ExpandedTemplate!//HelloWorld:GeneratedDummy:objc_library"//HelloWorld:TodoObjCSupport//HelloWorld:WatchAppLib//HelloWorld:TodoModels*ã6watchos_arm64-dbg-watchos-arm64-min7.0-ST-f4f2bb7e56edwatchos_arm64"@a8da815b4567c113ace2f8496f1007b1e40922a9431554315f9e6795da503fdb*å7ios_sim_arm64-dbg-ios-sim_arm64-min17.0-ST-2842469f5300ios_sim_arm64"@f161d5d463794e6e055a5321c65e321981e49f5b9b1314dc2b99a60362a91f0e‡@4e22c295465b6be8d87bc5bf4e49238ba3082d106ab91a4926f53075b9f79e9a"SwiftCompile(2]bazel-out/darwin_arm64-opt-exec-ST-d57f47055a04/bin/external/rules_swift+/tools/worker/worker2swiftc2-target2arm64-apple-ios17.0-simulator2-sdk2__BAZEL_XCODE_SDKROOT__2-file-prefix-map28__BAZEL_XCODE_DEVELOPER_DIR__=/PLACEHOLDER_DEVELOPER_DIR2C-Xwrapped-swift=-bazel-target-label=@@//HelloWorld:ExpandedTemplate2-emit-object2-output-file-map2vbazel-out/ios_sim_arm64-dbg-ios-sim_arm64-min17.0-ST-2842469f5300/bin/HelloWorld/ExpandedTemplate.output_file_map.json2
+-Xfrontend2-no-clang-module-breadcrumbs2-emit-module-path2mbazel-out/ios_sim_arm64-dbg-ios-sim_arm64-min17.0-ST-2842469f5300/bin/HelloWorld/ExpandedTemplate.swiftmodule2-enforce-exclusivity=checked2-emit-const-values-path2ébazel-out/ios_sim_arm64-dbg-ios-sim_arm64-min17.0-ST-2842469f5300/bin/HelloWorld/ExpandedTemplate_objs/ExpandedTemplate.swift.swiftconstvalues2
+-Xfrontend2-const-gather-protocols-file2
+-Xfrontend2Lexternal/rules_swift+/swift/toolchains/config/const_protocols_to_gather.json2-DDEBUG2-Onone2
+-Xfrontend2-internalize-at-link2
+-Xfrontend2-no-serialize-debugging-options2-enable-testing2-disable-sandbox2-g2'-Xwrapped-swift=-file-prefix-pwd-is-dot2%-Xwrapped-swift=-emit-swiftsourceinfo2-file-compilation-dir2.2-module-cache-path2Ybazel-out/ios_sim_arm64-dbg-ios-sim_arm64-min17.0-ST-2842469f5300/bin/_swift_module_cache2ó-Xwrapped-swift=-macro-expansion-dir=bazel-out/ios_sim_arm64-dbg-ios-sim_arm64-min17.0-ST-2842469f5300/bin/HelloWorld/ExpandedTemplate.macro-expansions2-Xcc2-iquote.2-Xcc2L-iquotebazel-out/ios_sim_arm64-dbg-ios-sim_arm64-min17.0-ST-2842469f5300/bin2
+-Xfrontend2-color-diagnostics2-enable-batch-mode2-module-name2ExpandedTemplate2-index-store-path2lbazel-out/ios_sim_arm64-dbg-ios-sim_arm64-min17.0-ST-2842469f5300/bin/HelloWorld/ExpandedTemplate.indexstore2-index-ignore-system-modules2-enable-bare-slash-regex2
+-Xfrontend2-disable-clang-spi2-enable-experimental-feature2AccessLevelOnImport2-parse-as-library2-static2-Xcc2-O02-Xcc2	-DDEBUG=12-Xcc2-fstack-protector2-Xcc2-fstack-protector-all2
+-Xfrontend2-checked-async-objc-bridging=on2gbazel-out/ios_sim_arm64-dbg-ios-sim_arm64-min17.0-ST-2842469f5300/bin/HelloWorld/ExpandedTemplate.swift:'
+XCODE_VERSION_OVERRIDE26.1.1.17B100:%
+APPLE_SDK_PLATFORMiPhoneSimulator:"
+APPLE_SDK_VERSION_OVERRIDE26.1Z
+requires-darwinZ 
+requires-worker-protocoljsonZ
+supports-workers1Z!
+supports-xcode-requirements-setr@@platforms//host:host∂@27ed596ed9a278e7d41bc1a66aaa7855f54720c3295dd238cbebca9b5ca3e68d"SwiftCompile(2]bazel-out/darwin_arm64-opt-exec-ST-d57f47055a04/bin/external/rules_swift+/tools/worker/worker2swiftc2-target2 arm64-apple-watchos7.0-simulator2-sdk2__BAZEL_XCODE_SDKROOT__2-file-prefix-map28__BAZEL_XCODE_DEVELOPER_DIR__=/PLACEHOLDER_DEVELOPER_DIR2=-Xwrapped-swift=-bazel-target-label=@@//HelloWorld:TodoModels2-emit-object2-output-file-map2obazel-out/watchos_arm64-dbg-watchos-arm64-min7.0-ST-f4f2bb7e56ed/bin/HelloWorld/TodoModels.output_file_map.json2
+-Xfrontend2-no-clang-module-breadcrumbs2-emit-module-path2fbazel-out/watchos_arm64-dbg-watchos-arm64-min7.0-ST-f4f2bb7e56ed/bin/HelloWorld/TodoModels.swiftmodule2-enforce-exclusivity=checked2-emit-const-values-path2íbazel-out/watchos_arm64-dbg-watchos-arm64-min7.0-ST-f4f2bb7e56ed/bin/HelloWorld/TodoModels_objs/TodoModels/Sources/TodoItem.swift.swiftconstvalues2
+-Xfrontend2-const-gather-protocols-file2
+-Xfrontend2Lexternal/rules_swift+/swift/toolchains/config/const_protocols_to_gather.json2-DDEBUG2-Onone2
+-Xfrontend2-internalize-at-link2
+-Xfrontend2-no-serialize-debugging-options2-enable-testing2-disable-sandbox2-g2'-Xwrapped-swift=-file-prefix-pwd-is-dot2%-Xwrapped-swift=-emit-swiftsourceinfo2-file-compilation-dir2.2-module-cache-path2Xbazel-out/watchos_arm64-dbg-watchos-arm64-min7.0-ST-f4f2bb7e56ed/bin/_swift_module_cache2ê-Xwrapped-swift=-macro-expansion-dir=bazel-out/watchos_arm64-dbg-watchos-arm64-min7.0-ST-f4f2bb7e56ed/bin/HelloWorld/TodoModels.macro-expansions2-Xcc2-iquote.2-Xcc2K-iquotebazel-out/watchos_arm64-dbg-watchos-arm64-min7.0-ST-f4f2bb7e56ed/bin2
+-Xfrontend2-color-diagnostics2-enable-batch-mode2-module-name2
+TodoModels2-index-store-path2ebazel-out/watchos_arm64-dbg-watchos-arm64-min7.0-ST-f4f2bb7e56ed/bin/HelloWorld/TodoModels.indexstore2-index-ignore-system-modules2-enable-bare-slash-regex2
+-Xfrontend2-disable-clang-spi2-enable-experimental-feature2AccessLevelOnImport2-parse-as-library2-static2-Xcc2-O02-Xcc2	-DDEBUG=12-Xcc2-fstack-protector2-Xcc2-fstack-protector-all2
+-Xfrontend2-checked-async-objc-bridging=on2,HelloWorld/TodoModels/Sources/TodoItem.swift23HelloWorld/TodoModels/Sources/TodoListManager.swift:'
+XCODE_VERSION_OVERRIDE26.1.1.17B100:$
+APPLE_SDK_PLATFORMWatchSimulator:"
+APPLE_SDK_VERSION_OVERRIDE26.1Z
+requires-darwinZ 
+requires-worker-protocoljsonZ
+supports-workers1Z!
+supports-xcode-requirements-setr@@platforms//host:hostª@aeb08f7d0a8ea7b129e85fd72831f618d5c38505350c8d5b386a10a3cd217db6"SwiftCompile(2]bazel-out/darwin_arm64-opt-exec-ST-d57f47055a04/bin/external/rules_swift+/tools/worker/worker2swiftc2-target2arm64-apple-ios17.0-simulator2-sdk2__BAZEL_XCODE_SDKROOT__2-file-prefix-map28__BAZEL_XCODE_DEVELOPER_DIR__=/PLACEHOLDER_DEVELOPER_DIR2=-Xwrapped-swift=-bazel-target-label=@@//HelloWorld:TodoModels2-emit-object2-output-file-map2pbazel-out/ios_sim_arm64-dbg-ios-sim_arm64-min17.0-ST-2842469f5300/bin/HelloWorld/TodoModels.output_file_map.json2
+-Xfrontend2-no-clang-module-breadcrumbs2-emit-module-path2gbazel-out/ios_sim_arm64-dbg-ios-sim_arm64-min17.0-ST-2842469f5300/bin/HelloWorld/TodoModels.swiftmodule2-enforce-exclusivity=checked2-emit-const-values-path2ìbazel-out/ios_sim_arm64-dbg-ios-sim_arm64-min17.0-ST-2842469f5300/bin/HelloWorld/TodoModels_objs/TodoModels/Sources/TodoItem.swift.swiftconstvalues2
+-Xfrontend2-const-gather-protocols-file2
+-Xfrontend2Lexternal/rules_swift+/swift/toolchains/config/const_protocols_to_gather.json2-DDEBUG2-Onone2
+-Xfrontend2-internalize-at-link2
+-Xfrontend2-no-serialize-debugging-options2-enable-testing2-disable-sandbox2-g2'-Xwrapped-swift=-file-prefix-pwd-is-dot2%-Xwrapped-swift=-emit-swiftsourceinfo2-file-compilation-dir2.2-module-cache-path2Ybazel-out/ios_sim_arm64-dbg-ios-sim_arm64-min17.0-ST-2842469f5300/bin/_swift_module_cache2ë-Xwrapped-swift=-macro-expansion-dir=bazel-out/ios_sim_arm64-dbg-ios-sim_arm64-min17.0-ST-2842469f5300/bin/HelloWorld/TodoModels.macro-expansions2-Xcc2-iquote.2-Xcc2L-iquotebazel-out/ios_sim_arm64-dbg-ios-sim_arm64-min17.0-ST-2842469f5300/bin2
+-Xfrontend2-color-diagnostics2-enable-batch-mode2-module-name2
+TodoModels2-index-store-path2fbazel-out/ios_sim_arm64-dbg-ios-sim_arm64-min17.0-ST-2842469f5300/bin/HelloWorld/TodoModels.indexstore2-index-ignore-system-modules2-enable-bare-slash-regex2
+-Xfrontend2-disable-clang-spi2-enable-experimental-feature2AccessLevelOnImport2-parse-as-library2-static2-Xcc2-O02-Xcc2	-DDEBUG=12-Xcc2-fstack-protector2-Xcc2-fstack-protector-all2
+-Xfrontend2-checked-async-objc-bridging=on2,HelloWorld/TodoModels/Sources/TodoItem.swift23HelloWorld/TodoModels/Sources/TodoListManager.swift:'
+XCODE_VERSION_OVERRIDE26.1.1.17B100:%
+APPLE_SDK_PLATFORMiPhoneSimulator:"
+APPLE_SDK_VERSION_OVERRIDE26.1Z
+requires-darwinZ 
+requires-worker-protocoljsonZ
+supports-workers1Z!
+supports-xcode-requirements-setr@@platforms//host:hostÁ@7346f9febdb41487b68a02ac720929924897bbea6f716bf842ae43051569dc22"SwiftCompile(2]bazel-out/darwin_arm64-opt-exec-ST-d57f47055a04/bin/external/rules_swift+/tools/worker/worker2swiftc2-target2arm64-apple-ios17.0-simulator2-sdk2__BAZEL_XCODE_SDKROOT__2-file-prefix-map28__BAZEL_XCODE_DEVELOPER_DIR__=/PLACEHOLDER_DEVELOPER_DIR2@-Xwrapped-swift=-bazel-target-label=@@//HelloWorld:HelloWorldLib2-emit-object2-output-file-map2sbazel-out/ios_sim_arm64-dbg-ios-sim_arm64-min17.0-ST-2842469f5300/bin/HelloWorld/HelloWorldLib.output_file_map.json2
+-Xfrontend2-no-clang-module-breadcrumbs2-emit-module-path2jbazel-out/ios_sim_arm64-dbg-ios-sim_arm64-min17.0-ST-2842469f5300/bin/HelloWorld/HelloWorldLib.swiftmodule2-enforce-exclusivity=checked2-emit-const-values-path2úbazel-out/ios_sim_arm64-dbg-ios-sim_arm64-min17.0-ST-2842469f5300/bin/HelloWorld/HelloWorldLib_objs/HelloWorldLib/Sources/AddTodoView.swift.swiftconstvalues2
+-Xfrontend2-const-gather-protocols-file2
+-Xfrontend2Lexternal/rules_swift+/swift/toolchains/config/const_protocols_to_gather.json2-DDEBUG2-Onone2
+-Xfrontend2-internalize-at-link2
+-Xfrontend2-no-serialize-debugging-options2-enable-testing2-disable-sandbox2-g2'-Xwrapped-swift=-file-prefix-pwd-is-dot2%-Xwrapped-swift=-emit-swiftsourceinfo2-file-compilation-dir2.2-module-cache-path2Ybazel-out/ios_sim_arm64-dbg-ios-sim_arm64-min17.0-ST-2842469f5300/bin/_swift_module_cache2R-Ibazel-out/ios_sim_arm64-dbg-ios-sim_arm64-min17.0-ST-2842469f5300/bin/HelloWorld2î-Xwrapped-swift=-macro-expansion-dir=bazel-out/ios_sim_arm64-dbg-ios-sim_arm64-min17.0-ST-2842469f5300/bin/HelloWorld/HelloWorldLib.macro-expansions2-Xcc2-iquote.2-Xcc2L-iquotebazel-out/ios_sim_arm64-dbg-ios-sim_arm64-min17.0-ST-2842469f5300/bin2-Xcc2E-fmodule-map-file=HelloWorld/TodoObjCSupport/Sources/module.modulemap2
+-Xfrontend2-color-diagnostics2-enable-batch-mode2-module-name2HelloWorldLib2-index-store-path2ibazel-out/ios_sim_arm64-dbg-ios-sim_arm64-min17.0-ST-2842469f5300/bin/HelloWorld/HelloWorldLib.indexstore2-index-ignore-system-modules2-enable-bare-slash-regex2
+-Xfrontend2-disable-clang-spi2-enable-experimental-feature2AccessLevelOnImport2-parse-as-library2-static2-Xcc2-O02-Xcc2	-DDEBUG=12-Xcc2-fstack-protector2-Xcc2-fstack-protector-all2
+-Xfrontend2-checked-async-objc-bridging=on22HelloWorld/HelloWorldLib/Sources/AddTodoView.swift24HelloWorld/HelloWorldLib/Sources/HelloWorldApp.swift22HelloWorld/HelloWorldLib/Sources/TodoItemRow.swift23HelloWorld/HelloWorldLib/Sources/TodoListView.swift:'
+XCODE_VERSION_OVERRIDE26.1.1.17B100:%
+APPLE_SDK_PLATFORMiPhoneSimulator:"
+APPLE_SDK_VERSION_OVERRIDE26.1Z
+requires-darwinZ 
+requires-worker-protocoljsonZ
+supports-workers1Z!
+supports-xcode-requirements-setr@@platforms//host:host’@ebd6d9335407bb3972e2fb56e05d7ce44d786a237dda09167b3e9aa1dd84346e"ObjcCompile(2cbazel-out/darwin_arm64-opt-exec-ST-d57f47055a04/bin/external/apple_support+/crosstool/wrapped_clang2-D_FORTIFY_SOURCE=12-fstack-protector2-fcolor-diagnostics2-Wall2-Wthread-safety2-Wself-assign2-fno-omit-frame-pointer2-g2--fdebug-prefix-map=__BAZEL_EXECUTION_ROOT__=.2K-fdebug-prefix-map=__BAZEL_XCODE_DEVELOPER_DIR__=/PLACEHOLDER_DEVELOPER_DIR2-Werror=incompatible-sysroot2-Wshorten-64-to-322-Wbool-conversion2-Wconstant-conversion2-Wduplicate-method-match2-Wempty-body2-Wenum-conversion2-Wint-conversion2-Wunreachable-code2-Wmismatched-return-types2-Wundeclared-selector2-Wuninitialized2-Wunused-function2-Wunused-variable2-iquote2.2-iquote2Ebazel-out/ios_sim_arm64-dbg-ios-sim_arm64-min17.0-ST-2842469f5300/bin2-MD2-MF2xbazel-out/ios_sim_arm64-dbg-ios-sim_arm64-min17.0-ST-2842469f5300/bin/HelloWorld/_objs/TodoObjCSupport/arc/SKObjCUtils.d2-DOS_IOS2-fno-autolink2	-isysroot2__BAZEL_XCODE_SDKROOT__23-F__BAZEL_XCODE_SDKROOT__/System/Library/Frameworks2_-F__BAZEL_XCODE_DEVELOPER_DIR__/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks2
+-fobjc-arc2-no-canonical-prefixes2-target2arm64-apple-ios17.0-simulator2-fexceptions2-fasm-blocks2-fobjc-abi-version=22-fobjc-legacy-dispatch2-O02	-DDEBUG=12-fstack-protector2-fstack-protector-all2-g2-Wno-builtin-macro-redefined2-D__DATE__="redacted"2-D__TIMESTAMP__="redacted"2-D__TIME__="redacted"2-c20HelloWorld/TodoObjCSupport/Sources/SKObjCUtils.m2-o2xbazel-out/ios_sim_arm64-dbg-ios-sim_arm64-min17.0-ST-2842469f5300/bin/HelloWorld/_objs/TodoObjCSupport/arc/SKObjCUtils.o:'
+XCODE_VERSION_OVERRIDE26.1.1.17B100:"
+APPLE_SDK_VERSION_OVERRIDE26.1:%
+APPLE_SDK_PLATFORMiPhoneSimulator:
+ZERO_AR_DATE1PZ
+requires-darwinZ!
+supports-xcode-requirements-setr@@platforms//host:host˝@cc8cc72af887880eeb2d168c67181351bf94bd5190243d50345caaac53653b59"ObjcCompile(2fbazel-out/darwin_arm64-opt-exec-ST-d57f47055a04/bin/external/apple_support+/crosstool/wrapped_clang_pp2-stdlib=libc++2-std=gnu++172-D_FORTIFY_SOURCE=12-fstack-protector2-fcolor-diagnostics2-Wall2-Wthread-safety2-Wself-assign2-fno-omit-frame-pointer2-g2--fdebug-prefix-map=__BAZEL_EXECUTION_ROOT__=.2K-fdebug-prefix-map=__BAZEL_XCODE_DEVELOPER_DIR__=/PLACEHOLDER_DEVELOPER_DIR2-Werror=incompatible-sysroot2-Wshorten-64-to-322-Wbool-conversion2-Wconstant-conversion2-Wduplicate-method-match2-Wempty-body2-Wenum-conversion2-Wint-conversion2-Wunreachable-code2-Wmismatched-return-types2-Wundeclared-selector2-Wuninitialized2-Wunused-function2-Wunused-variable2-iquote2.2-iquote2Ebazel-out/ios_sim_arm64-dbg-ios-sim_arm64-min17.0-ST-2842469f5300/bin2-MD2-MF2zbazel-out/ios_sim_arm64-dbg-ios-sim_arm64-min17.0-ST-2842469f5300/bin/HelloWorld/_objs/TodoObjCSupport/arc/SKObjCppUtils.d2-DOS_IOS2-fno-autolink2	-isysroot2__BAZEL_XCODE_SDKROOT__23-F__BAZEL_XCODE_SDKROOT__/System/Library/Frameworks2_-F__BAZEL_XCODE_DEVELOPER_DIR__/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks2
+-fobjc-arc2-no-canonical-prefixes2-target2arm64-apple-ios17.0-simulator2-fexceptions2-fasm-blocks2-fobjc-abi-version=22-fobjc-legacy-dispatch2-O02	-DDEBUG=12-fstack-protector2-fstack-protector-all2-g2-Wno-builtin-macro-redefined2-D__DATE__="redacted"2-D__TIMESTAMP__="redacted"2-D__TIME__="redacted"2-c23HelloWorld/TodoObjCSupport/Sources/SKObjCppUtils.mm2-o2zbazel-out/ios_sim_arm64-dbg-ios-sim_arm64-min17.0-ST-2842469f5300/bin/HelloWorld/_objs/TodoObjCSupport/arc/SKObjCppUtils.o:'
+XCODE_VERSION_OVERRIDE26.1.1.17B100:"
+APPLE_SDK_VERSION_OVERRIDE26.1:%
+APPLE_SDK_PLATFORMiPhoneSimulator:
+ZERO_AR_DATE1PZ
+requires-darwinZ!
+supports-xcode-requirements-setr@@platforms//host:hostŒ@0254e4a58ca213ea05a691851c5537af37f2af1031b49af9c4998ba6f12ea20f"SwiftCompile(2]bazel-out/darwin_arm64-opt-exec-ST-d57f47055a04/bin/external/rules_swift+/tools/worker/worker2swiftc2-target2arm64-apple-ios17.0-simulator2-sdk2__BAZEL_XCODE_SDKROOT__2-file-prefix-map28__BAZEL_XCODE_DEVELOPER_DIR__=/PLACEHOLDER_DEVELOPER_DIR2A-Xwrapped-swift=-bazel-target-label=@@//HelloWorld:GeneratedDummy2-emit-object2-output-file-map2tbazel-out/ios_sim_arm64-dbg-ios-sim_arm64-min17.0-ST-2842469f5300/bin/HelloWorld/GeneratedDummy.output_file_map.json2
+-Xfrontend2-no-clang-module-breadcrumbs2-emit-module-path2kbazel-out/ios_sim_arm64-dbg-ios-sim_arm64-min17.0-ST-2842469f5300/bin/HelloWorld/GeneratedDummy.swiftmodule2-enforce-exclusivity=checked2-emit-const-values-path2äbazel-out/ios_sim_arm64-dbg-ios-sim_arm64-min17.0-ST-2842469f5300/bin/HelloWorld/GeneratedDummy_objs/GeneratedDummy.swift.swiftconstvalues2
+-Xfrontend2-const-gather-protocols-file2
+-Xfrontend2Lexternal/rules_swift+/swift/toolchains/config/const_protocols_to_gather.json2-DDEBUG2-Onone2
+-Xfrontend2-internalize-at-link2
+-Xfrontend2-no-serialize-debugging-options2-enable-testing2-disable-sandbox2-g2'-Xwrapped-swift=-file-prefix-pwd-is-dot2%-Xwrapped-swift=-emit-swiftsourceinfo2-file-compilation-dir2.2-module-cache-path2Ybazel-out/ios_sim_arm64-dbg-ios-sim_arm64-min17.0-ST-2842469f5300/bin/_swift_module_cache2ï-Xwrapped-swift=-macro-expansion-dir=bazel-out/ios_sim_arm64-dbg-ios-sim_arm64-min17.0-ST-2842469f5300/bin/HelloWorld/GeneratedDummy.macro-expansions2-Xcc2-iquote.2-Xcc2L-iquotebazel-out/ios_sim_arm64-dbg-ios-sim_arm64-min17.0-ST-2842469f5300/bin2
+-Xfrontend2-color-diagnostics2-enable-batch-mode2-module-name2GeneratedDummy2-index-store-path2jbazel-out/ios_sim_arm64-dbg-ios-sim_arm64-min17.0-ST-2842469f5300/bin/HelloWorld/GeneratedDummy.indexstore2-index-ignore-system-modules2-enable-bare-slash-regex2
+-Xfrontend2-disable-clang-spi2-enable-experimental-feature2AccessLevelOnImport2-parse-as-library2-static2-Xcc2-O02-Xcc2	-DDEBUG=12-Xcc2-fstack-protector2-Xcc2-fstack-protector-all2
+-Xfrontend2-checked-async-objc-bridging=on2ebazel-out/ios_sim_arm64-dbg-ios-sim_arm64-min17.0-ST-2842469f5300/bin/HelloWorld/GeneratedDummy.swift:'
+XCODE_VERSION_OVERRIDE26.1.1.17B100:%
+APPLE_SDK_PLATFORMiPhoneSimulator:"
+APPLE_SDK_VERSION_OVERRIDE26.1Z
+requires-darwinZ 
+requires-worker-protocoljsonZ
+supports-workers1Z!
+supports-xcode-requirements-setr@@platforms//host:hostÔ@9e31f366f5d4a694c22d951b8cc078b5f774f1f96569a974276766c2cd2541ee"SwiftCompile(2]bazel-out/darwin_arm64-opt-exec-ST-d57f47055a04/bin/external/rules_swift+/tools/worker/worker2swiftc2-target2 arm64-apple-watchos7.0-simulator2-sdk2__BAZEL_XCODE_SDKROOT__2-file-prefix-map28__BAZEL_XCODE_DEVELOPER_DIR__=/PLACEHOLDER_DEVELOPER_DIR2>-Xwrapped-swift=-bazel-target-label=@@//HelloWorld:WatchAppLib2-emit-object2-output-file-map2pbazel-out/watchos_arm64-dbg-watchos-arm64-min7.0-ST-f4f2bb7e56ed/bin/HelloWorld/WatchAppLib.output_file_map.json2
+-Xfrontend2-no-clang-module-breadcrumbs2-emit-module-path2gbazel-out/watchos_arm64-dbg-watchos-arm64-min7.0-ST-f4f2bb7e56ed/bin/HelloWorld/WatchAppLib.swiftmodule2-enforce-exclusivity=checked2-emit-const-values-path2ùbazel-out/watchos_arm64-dbg-watchos-arm64-min7.0-ST-f4f2bb7e56ed/bin/HelloWorld/WatchAppLib_objs/WatchApp/WatchAppLib/Sources/WatchApp.swift.swiftconstvalues2
+-Xfrontend2-const-gather-protocols-file2
+-Xfrontend2Lexternal/rules_swift+/swift/toolchains/config/const_protocols_to_gather.json2-DDEBUG2-Onone2
+-Xfrontend2-internalize-at-link2
+-Xfrontend2-no-serialize-debugging-options2-enable-testing2-disable-sandbox2-g2'-Xwrapped-swift=-file-prefix-pwd-is-dot2%-Xwrapped-swift=-emit-swiftsourceinfo2-file-compilation-dir2.2-module-cache-path2Xbazel-out/watchos_arm64-dbg-watchos-arm64-min7.0-ST-f4f2bb7e56ed/bin/_swift_module_cache2Q-Ibazel-out/watchos_arm64-dbg-watchos-arm64-min7.0-ST-f4f2bb7e56ed/bin/HelloWorld2ë-Xwrapped-swift=-macro-expansion-dir=bazel-out/watchos_arm64-dbg-watchos-arm64-min7.0-ST-f4f2bb7e56ed/bin/HelloWorld/WatchAppLib.macro-expansions2-Xcc2-iquote.2-Xcc2K-iquotebazel-out/watchos_arm64-dbg-watchos-arm64-min7.0-ST-f4f2bb7e56ed/bin2
+-Xfrontend2-color-diagnostics2-enable-batch-mode2-module-name2WatchAppLib2-index-store-path2fbazel-out/watchos_arm64-dbg-watchos-arm64-min7.0-ST-f4f2bb7e56ed/bin/HelloWorld/WatchAppLib.indexstore2-index-ignore-system-modules2-enable-bare-slash-regex2
+-Xfrontend2-disable-clang-spi2-enable-experimental-feature2AccessLevelOnImport2-parse-as-library2-static2-Xcc2-O02-Xcc2	-DDEBUG=12-Xcc2-fstack-protector2-Xcc2-fstack-protector-all2
+-Xfrontend2-checked-async-objc-bridging=on26HelloWorld/WatchApp/WatchAppLib/Sources/WatchApp.swift:'
+XCODE_VERSION_OVERRIDE26.1.1.17B100:$
+APPLE_SDK_PLATFORMWatchSimulator:"
+APPLE_SDK_VERSION_OVERRIDE26.1Z
+requires-darwinZ 
+requires-worker-protocoljsonZ
+supports-workers1Z!
+supports-xcode-requirements-setr@@platforms//host:host
