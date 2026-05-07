@@ -1134,6 +1134,7 @@ final class ChatListControllerNode: ASDisplayNode, ASGestureRecognizerDelegate {
     let navigationBarView = ComponentView<Empty>()
     let filterTabsView = ComponentView<Empty>()
     private(set) var filterTabsHeight: CGFloat = 0.0
+    private let filterTabsMaxHeight: CGFloat = 50.0
     private let filterTabsBottomSpacing: CGFloat = 4.0
     private let filterTabsAdditionalInset: CGFloat = 8.0
     weak var controller: ChatListControllerImpl?
@@ -1405,7 +1406,7 @@ final class ChatListControllerNode: ASDisplayNode, ASGestureRecognizerDelegate {
         }
     }
     
-    private func calculateFilterTabsYPosition(layout: ContainerViewLayout, filterTabsSize: CGSize) -> CGFloat {
+    private func filterTabsYPosition(for layout: ContainerViewLayout, size filterTabsSize: CGSize) -> CGFloat {
         return layout.size.height - layout.intrinsicInsets.bottom - filterTabsSize.height - self.filterTabsBottomSpacing
     }
     
@@ -1728,13 +1729,13 @@ final class ChatListControllerNode: ASDisplayNode, ASGestureRecognizerDelegate {
                 transition: transition,
                 component: filterTabs,
                 environment: {},
-                containerSize: CGSize(width: layout.size.width, height: 50.0)
+                containerSize: CGSize(width: layout.size.width, height: self.filterTabsMaxHeight)
             )
             if let filterTabsView = self.filterTabsView.view {
                 if filterTabsView.superview == nil {
                     self.view.addSubview(filterTabsView)
                 }
-                let y = self.calculateFilterTabsYPosition(layout: layout, filterTabsSize: filterTabsSize)
+                let y = self.filterTabsYPosition(for: layout, size: filterTabsSize)
                 transition.setAlpha(view: filterTabsView, alpha: 1.0)
                 transition.setFrame(view: filterTabsView, frame: CGRect(origin: CGPoint(x: 0.0, y: y), size: filterTabsSize))
                 filterTabsHeight = filterTabsSize.height + self.filterTabsAdditionalInset
