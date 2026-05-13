@@ -114,3 +114,11 @@ Each release is built using a specific Xcode version (see `versions.json`). The 
 ```
 python3 build-system/Make/Make.py --overrideXcodeVersion build ... # Don't check the version of Xcode
 ```
+
+## Missing Metal Toolchain Error
+
+If you encounter an error like `error: cannot execute tool 'metal' due to missing Metal Toolchain` during compilation, run the following command to download the required components:
+
+```sh
+xcodebuild -downloadComponent MetalToolchain
+```
