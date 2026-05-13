@@ -57,5 +57,14 @@ python3 build-system/Make/Make.py \
 echo "清理临时钥匙串..."
 security delete-keychain "$MY_KEYCHAIN" 2>/dev/null || true
 
-echo "构建完成！IPA及DSYM文件保存在: $OUTPUT_PATH"
+# ===== 重命名为 .tipa（TrollStore 格式） =====
+if [ -f "$OUTPUT_PATH/Telegram.ipa" ]; then
+    mv "$OUTPUT_PATH/Telegram.ipa" "$OUTPUT_PATH/Telegram.tipa"
+    echo "构建完成！产物保存在: $OUTPUT_PATH"
+    echo "  Telegram.tipa (TrollStore 格式)"
+    echo "  Telegram.DSYMs.zip"
+else
+    echo "错误：未找到构建产物 Telegram.ipa"
+    exit 1
+fi
 open "$OUTPUT_PATH"
